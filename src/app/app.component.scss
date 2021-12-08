@@ -1,0 +1,22 @@
+header{
+  z-index: 1px;
+  padding: 15px;
+  margin: 0;
+  background-image:linear-gradient(rgb(147, 163, 231), rgb(208, 209, 231), rgb(55, 35, 240));
+  display: flex;
+  justify-content: space-between;
+
+}
+a{
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+
+    transform: scale(1.1);
+    color:rgb(255, 255, 255);
+
+
+}

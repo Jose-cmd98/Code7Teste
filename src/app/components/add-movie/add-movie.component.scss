@@ -1,0 +1,13 @@
+.main-div{
+  display: flex;
+  max-width: 400px;
+  margin: auto;
+}
+
+::ng-deep{
+  .mat-toolbar{
+    justify-content: center;
+    align-content: center;
+    font-weight: 410;
+  }
+}

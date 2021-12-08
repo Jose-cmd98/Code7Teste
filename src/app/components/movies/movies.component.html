@@ -1,0 +1,39 @@
+<mat-toolbar class="app-title">
+  <!-- <div class="filters">
+    <mat-form-field>
+      <mat-label>Sort</mat-label>
+      <mat-select panelClass="sort-select" [(ngModel)]="sort">
+      <mat-option value="name">Name</mat-option>
+      <mat-option value="released">Released</mat-option>
+      <mat-option value="updated">Updated</mat-option>
+      <mat-option value="rating">Rating</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div> -->
+  <h2>Filmes Cadastrados</h2>
+</mat-toolbar>
+
+
+<div *ngFor="let item of movie" class="box-container">
+  <div class="box-content">
+  <mat-card  class="movie-card">
+    <mat-card-header>
+      <mat-card-title class="title"> {{item.nome}} </mat-card-title>
+      <mat-card-subtitle> {{item.diretor}} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{item.poster}}" alt="Poster" class="poster">
+    <mat-card-content class="overview">
+      <p> {{item.descricao}} </p>
+    </mat-card-content>
+    <mat-card-content>
+      <p> {{item.ano}} | {{item.genero}} </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="botao" color="accent" (click)="open()" mat-raised-button>OPEN</button>
+    </mat-card-actions>
+  </mat-card>
+  </div>
+</div>
+
+
+

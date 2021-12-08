@@ -1,0 +1,65 @@
+.box-container{
+  display: inline-block;
+  justify-content: center;
+  max-width: 300px;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.box-content{
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 20px;
+
+}
+
+.movie-card{
+  box-sizing: border-box;
+  min-width: 180px;
+  min-height: 350px;
+  margin-bottom: 20px;
+}
+.poster {
+    height: 300px;
+    object-fit: contain;
+
+}
+.title{
+  min-height: 50px;
+  font-family: 'Verdana, Tahoma, sans-serif';
+}
+
+.overview{
+  font-size: 15px;
+  margin-right: 12px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  min-height: 200px;
+}
+
+.botao{
+  &:hover{
+    background-color: white;
+    color: blue;
+  }
+}
+
+//mat-field
+.filters{
+  width: 350px;
+  margin: 20px;
+  padding-left: 10px;
+  height: 55px;
+}
+// goes deep inside MatCss
+::ng-deep{
+  .mat-form-field-infix{
+    margin: auto;
+    background-color: #3f51b5;
+    border-radius: 1px;
+  }
+
+}
+
+
+
+
