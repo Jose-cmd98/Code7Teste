@@ -12,23 +12,15 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    children: [
-      {
-        path: '',
-        component: MoviesComponent
-      },
-      {
-
-          path: ':id', //passando :id como parametro
-           component: ShowmovieComponent
-
-      }
-    ]
-
+     component: MoviesComponent
     },
   {
     path: 'add-movie',
      component: AddMovieComponent
+    },
+    {
+      path: 'movie/:id',
+       component: ShowmovieComponent
     }
 ];
 

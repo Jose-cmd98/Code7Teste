@@ -12,15 +12,15 @@ export class ShowmovieComponent implements OnInit {
   //variavel do tipo Movie(model)
   movie!: Movie;
 
-  constructor() { }
+  constructor(private ActivatedRoute: ActivatedRoute, private service: MoviesService) { }
 
   ngOnInit(): void {
-
+   this.show(this.ActivatedRoute.snapshot.params['id']);
   }
   //FUTURA IMPLEMENTACAO
-  // private show(id: number){
-  //   this.service.show(id).subscribe((movie:Movie) => {
-  //     this.movie = movie;
-  //   })
-  // }
+  private show(id: number){
+    this.service.show(id).subscribe((movie:Movie) => {
+      this.movie = movie;
+    })
+  }
 }
