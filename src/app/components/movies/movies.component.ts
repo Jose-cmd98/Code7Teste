@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 
@@ -17,7 +18,7 @@ export class MoviesComponent implements OnInit {
   //array de filmes
   movie!: any[];
 
-  constructor(private service:MoviesService) { }
+  constructor(private service:MoviesService, private router:Router) { }
 
   ngOnInit(): void {
     //faz chamada assync do array de filmes
@@ -25,8 +26,10 @@ export class MoviesComponent implements OnInit {
       this.movie = filmes;
     })
   }
-  open(){
 
+  //futura implementacao de busca por id do filme
+  open(id: number): void{
+    this.router.navigateByUrl("movies/" + id);
   }
 
 }

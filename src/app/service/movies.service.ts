@@ -30,4 +30,10 @@ export class MoviesService {
    adicionar(movie: any): Observable<Movie>{
      return this.httpClient.post<Movie>(this.url, movie)
    }
+
+    //FUTURA IMPLEMENTACAO
+  //  //Retorna a mesma chamada do (all) porem, passando o (id) como parametro
+  //  show(id: number): Observable<Movie>{
+  //    return this.httpClient.get<Movie>(this.url + id)
+  //  }
 }

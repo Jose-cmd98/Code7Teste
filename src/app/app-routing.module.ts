@@ -1,3 +1,4 @@
+import { ShowmovieComponent } from './components/showmovie/showmovie.component';
 import { AddMovieComponent } from './components/add-movie/add-movie.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,19 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-     component: MoviesComponent
+    children: [
+      {
+        path: '',
+        component: MoviesComponent
+      },
+      {
+
+          path: ':id', //passando :id como parametro
+           component: ShowmovieComponent
+
+      }
+    ]
+
     },
   {
     path: 'add-movie',

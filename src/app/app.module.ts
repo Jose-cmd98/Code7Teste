@@ -18,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ShowmovieComponent } from './components/showmovie/showmovie.component';
 
 
 
@@ -26,7 +27,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent,
     MoviesComponent,
     AddMovieComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    ShowmovieComponent
   ],
   imports: [
     BrowserModule,
