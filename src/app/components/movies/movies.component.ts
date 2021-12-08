@@ -29,7 +29,7 @@ export class MoviesComponent implements OnInit {
 
   //futura implementacao de busca por id do filme
   open(id: number): void{
-    this.router.navigateByUrl("movie/:id" + id);
+    this.router.navigateByUrl(":id" + id);
   }
 
 }
