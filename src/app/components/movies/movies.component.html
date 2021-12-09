@@ -1,15 +1,4 @@
 <mat-toolbar class="app-title">
-  <!-- <div class="filters">
-    <mat-form-field>
-      <mat-label>Sort</mat-label>
-      <mat-select panelClass="sort-select" [(ngModel)]="sort">
-      <mat-option value="name">Name</mat-option>
-      <mat-option value="released">Released</mat-option>
-      <mat-option value="updated">Updated</mat-option>
-      <mat-option value="rating">Rating</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div> -->
   <h2>Filmes Cadastrados</h2>
 </mat-toolbar>
 
@@ -26,7 +15,7 @@
       <p> {{item.descricao}} </p>
     </mat-card-content>
     <mat-card-content>
-      <p> {{item.ano}} | {{item.genero}} </p>
+      <p> {{item.ano}} | {{item.genero}}</p>
     </mat-card-content>
     <mat-card-actions>
       <button class="botao" color="accent" (click)="open(item.id)" mat-raised-button>OPEN</button>

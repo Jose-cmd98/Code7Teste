@@ -33,7 +33,8 @@ export class MoviesService {
 
 
    //Retorna a mesma chamada do (all) porem, passando o (id) como parametro
-   show(id: number): Observable<Movie>{
-     return this.httpClient.get<Movie>(this.url)
+   show(id: string): Observable<Movie>{
+     const urlGet = `${this.url}/${id}` //concat da url + id dentro de uma const
+     return this.httpClient.get<Movie>(urlGet) //Retorno htttpclient com o metodo get a minha const
    }
 }

@@ -19,7 +19,7 @@ const routes: Routes = [
      component: AddMovieComponent
     },
     {
-      path: ':id',
+      path: 'movies/:id', //rota do id alterada
        component: ShowmovieComponent
     }
 ];

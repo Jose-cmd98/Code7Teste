@@ -1,4 +1,7 @@
-<div>
-
-  <h1>Manutenção</h1>
-</div>
+<mat-list >
+  <mat-list-item class="title"> Título: {{movie.nome}} </mat-list-item>
+  <mat-list-item > Data de lançamento: {{movie.ano}} </mat-list-item>
+  <mat-list-item> Gênero: {{movie.genero}} </mat-list-item>
+  <mat-list-item class="descricao"> Descrição: {{movie.descricao}} </mat-list-item>
+  <img mat-card-image [src]="movie.poster" >
+</mat-list>

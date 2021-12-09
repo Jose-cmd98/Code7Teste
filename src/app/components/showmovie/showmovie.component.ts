@@ -9,18 +9,16 @@ import { Movie } from 'src/app/models/movies.model';
   styleUrls: ['./showmovie.component.scss']
 })
 export class ShowmovieComponent implements OnInit {
-  //variavel do tipo Movie(model)
+
   movie!: Movie;
 
   constructor(private ActivatedRoute: ActivatedRoute, private service: MoviesService) { }
 
   ngOnInit(): void {
-   this.show(this.ActivatedRoute.snapshot.params['id']);
-  }
-  //FUTURA IMPLEMENTACAO
-  private show(id: number){
-    this.service.show(id).subscribe((movie:Movie) => {
-      this.movie = movie;
+    const id = this.ActivatedRoute.snapshot.paramMap.get('id'); //const id guarda o metodo get retornando id
+    this.service.show(id!).subscribe((movie: Movie) =>{ // usando metodo show do service que faz a chamada da api
+      this.movie = movie;                               // e atribuindo movie que recebe Movie(model) ao movie que uso no template
     })
   }
+
 }
