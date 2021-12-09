@@ -27,7 +27,7 @@ export class MoviesComponent implements OnInit {
     })
   }
 
-  //futura implementacao de busca por id do filme
+  // chamada por id movies/id do json
   open(id: number): void{
     this.router.navigate(['movies/', id]);
   }
